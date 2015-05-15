@@ -1,0 +1,63 @@
+@font-face {
+    font-family:"Herald Regular";
+    src:url("../fonts/HERALD.eot?") format("eot"),
+        url("../fonts/HERALD.woff") format("woff"),
+        url("../fonts/HERALD.ttf") format("truetype"),
+        url("../fonts/HERALD.svg#Herald") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+body {background: url('../img/bg.jpg') no-repeat top center;font-family: "Herald Regular", Arial, Sans-serif;font-size: 16px;color: #000;height: 1790px;-webkit-font-smoothing:antialiased;}
+.container {margin: 0 auto;width: 1170px;}
+.special-font {font-family: "Herald Regular", Arial, Sans-serif;font-size: 16px;}
+.centered {text-align: center;}
+#panel1, #panel2, #panel3, #panel4 {float: left;width: 100%;}
+#panel1 {height: 544px;}
+#panel1 #left_text {float: left;width: 330px;margin: 117px 0 0 194px;}
+#panel1_right_wrapper {float: right;margin: 138px 111px 0 0;width: 283px;}
+#panel1_right_text ul {list-style: outside disc;margin: 10px 0 30px 22px;float: left;}
+#panel1_right_text ul li {float: left;font-size: 17px;width: 100%;margin: 10px 0;}
+#panel1_button {float: left;text-align: center;margin-top: 14px;width: 100%;}
+.btn_amazon_sm {float: left;width: 281px;height: 77px;display: block;background: url('../img/btn_amazon_sm.png') no-repeat 5px 0;}
+#panel2 {height: 400px;}
+#panel2_text {float: left;width: 458px;margin: 34px 0 0 345px;}
+#panel2 ul {list-style: outside disc;margin: 0;float: left;}
+#panel2 ul li {font-size: 22px;float: left;width: 100%;margin: 15px 0;}
+#panel3_text {float: left;width: 520px;text-transform: uppercase;font-size: 28px;margin: 35px 0 0 492px;}
+#panel3 ul {float: left;margin-top: 5px;width: 100%;}
+#panel3 ul li {float: left;width: 100%;margin: 15px 0 15px 20px;}
+#panel3 {height: 383px;}
+#panel4 {background: url('../img/panel_4_bg.png') no-repeat center top;margin-top: 40px;height: 422px;}
+#panel4 ul {float: left;list-style: outside disc;font-size: 28px;width: 360px;margin: 20px 0 0 95px;}
+#panel4 ul li {float: left;width: 100%;margin: 15px 0;}
+#button_wrapper {float: left;width: 346px;margin: 94px 0 5px 0;}
+#card_types {float: left;width: 100%;height: 31px;text-align: center;}
+.btn_amazon_lg {background: url('../img/btn_amazon_lg.png') no-repeat;float: left;width: 346px;height: 97px;margin: 0 0 5px 0;}
+.black {color: #000;}
+.white {color: #fff;}
+.green {color: #669b02;}
+.lg-font {font-size: 36px;line-height: 33px;}
