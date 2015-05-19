@@ -1,3 +1,23 @@
+<?php
+require_once '_db.php';
+
+$ip = $_SERVER['HTTP_X_CLUSTER_CLIENT_IP'] ?: ($_SERVER['HTTP_X_FORWARDED_FOR'] ?: $_SERVER['REMOTE_ADDR']);
+$ipint = ip2long($ip);
+$referer = $_SERVER['HTTP_REFERER'];
+$useragent = $_SERVER['HTTP_USER_AGENT'];
+
+if ($_REQUEST['buy']) {
+    $sth = $db->prepare('insert into gluco_log (log_type, ip, ip_int, referer, user_agent, ref_id) values (?,?,?,?,?,?)');
+    $sth->execute(array(2, $ip, $ipint, $referer, $useragent, $_REQUEST['buy']));
+
+    header("Location: http://www.amazon.com/gp/product/B00X4QN58Q/");
+    exit;
+}
+
+$sth = $db->prepare('insert into gluco_log (log_type, ip, ip_int, referer, user_agent) values (?,?,?,?,?)');
+$sth->execute(array(1, $ip, $ipint, $referer, $useragent));
+$id = $db->lastInsertId();
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -26,7 +46,7 @@
                 </ul>
             </div>
             <div id="panel1_button">
-                <a href="http://www.amazon.com/Gluco%C2%B3MSM-Compare-Dasuquin-Nutramax%C2%AE-Chewable/dp/B00X4QN58Q/ref=sr_1_1?ie=UTF8&sr=8-1&keywords=dasuquin" class="btn_amazon_sm"></a>
+                <a href="?buy=<?php echo $id; ?>" class="btn_amazon_sm"></a>
             </div>
         </div>
     </div>
